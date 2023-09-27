@@ -4,3 +4,6 @@ __pycache__/
 
 # virtualenv
 lab4-venv
+
+
+.vscode
