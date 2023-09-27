@@ -8,10 +8,12 @@ def home():
     if request.method == "GET":
         data = "hello world"
         return jsonify({"data": data})
-
+    if(request.method == "POST"):
+        data = request.get_json()
+        return jsonify(data)
 
 @app.route("/home/<int:num>", methods=["GET"])
 def disp(num):
-    return jasonify({data: num * 2})
+    return jsonify({'data': num * 2})
 
-app.run()
+app.run(debug=True)
